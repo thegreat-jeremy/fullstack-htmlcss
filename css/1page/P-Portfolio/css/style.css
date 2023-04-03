@@ -1,0 +1,155 @@
+@media screen and (max-width: 768px) {
+  .row,
+  .navbar {
+    flex-direction: column;
+  }
+
+  /* .navbar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  .navbar a {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar > .icons {
+    display: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  } */
+}
+
+body {
+  background-color: #f4f3ea;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header .menu-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  background-color: #f4f3ea;
+  flex-wrap: nowrap;
+
+  height: 100%;
+}
+/*왼쪽 헤더*/
+
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+header .text-1 {
+  color: rgba(0, 0, 0, 1);
+  width: 120px;
+  padding: 5px;
+  margin: 5px, 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+header .navbar a {
+  color: #ecbd04;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #0067a3;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+}
+.row::before {
+  content: "";
+  background-image: url("../img/deamoon.png");
+  background-position: center;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/*왼쪽 섹션*/
+.side {
+  flex: 3;
+  padding: 20px;
+}
+.fimg {
+  width: 100%;
+  padding: 20px;
+}
+.main {
+  flex: 7;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.a-side {
+  list-style-type: "*";
+  display: flex;
+  flex-direction: column;
+}
+.a-side a {
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.a-side a:hover {
+  color: #6f4f28;
+  font-weight: bold;
+}
+.section {
+  width: 300px;
+}
+.section img {
+  display: flex;
+  flex-direction: row;
+}
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 1);
+  font-size: 25px;
+  color: #0067a3;
+}

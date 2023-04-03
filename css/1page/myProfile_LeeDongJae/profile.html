@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      /* html {
+        scroll-behavior: smooth;
+      } */
+
+      .navbar {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(46, 39, 24);
+        padding: 0;
+        /* z-index: 9999; */
+      }
+
+      .navbar a {
+        color: white;
+        padding: 16px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        background-color: beige;
+        color: black;
+      }
+
+      .main_background {
+        background-image: url("./img/meerkat-gb5dab1a95_1280.jpg");
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .main_intro {
+        position: relative;
+        top: 30%;
+        left: 10%;
+        color: wheat;
+      }
+
+      /* 왜 .main_intro a:hover 는 선택자로 작동이 안될까요 */
+      .main_intro:hover {
+        text-decoration: underline;
+      }
+
+      h1 {
+        text-decoration: underline;
+        text-underline-position: under;
+        margin: 0;
+        padding: 5%;
+        text-align: center;
+      }
+
+      .main_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+      }
+
+      #about_me_id h1,
+      section #portfolio_id {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      section .main_row,
+      #about_me_id h1,
+      #contacts_id h1 {
+        background-color: rgb(219, 227, 214);
+      }
+
+      #portfolio_id,
+      #portfolio_id > .main_row {
+        background-color: rgb(249, 242, 236);
+      }
+
+      .portfolio {
+        text-align: center;
+        background-color: rgb(249, 242, 236);
+      }
+
+      .side1,
+      .side2,
+      .side3 {
+        border: 1px black;
+        text-align: center;
+        height: 20%;
+      }
+
+      .side1 > p,
+      .side2 > p,
+      .side3 > p,
+      .main_row p,
+      .contacts_row p {
+        padding: 5%;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: larger;
+      }
+
+      .portfolio h2 {
+        padding: 2%;
+      }
+
+      footer h6 {
+        text-align: center;
+        margin: 20px;
+      }
+
+      .display_inline {
+        display: inline;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      h2,
+      p {
+        margin: 0;
+      }
+
+      @media screen and (max-width: 800px) {
+        .main_row,
+        .row,
+        .navbar {
+          flex-direction: column;
+        }
+
+        .navbar {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- 인라인 코딩이 너무 길어져서 이 부분은 인터널로 작성하였습니다 ㅠㅠ -->
+      <div
+        style="
+          color: white;
+          font-weight: 800;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 1%;
+        "
+      >
+        LEE's Office
+      </div>
+      <div class="main_row">
+        <a href="#home_id">Home</a>
+        <a href="#about_me_id">About me</a>
+        <a href="#portfolio_id">Portfolio</a>
+        <a href="#contacts_id">Contacts</a>
+      </div>
+    </nav>
+    <main>
+      <section class="main_background" id="home_id">
+        <h2 class="main_intro display_inline">Quick Move Below</h2>
+        <br />
+        <br />
+        <br />
+        <br />
+        <a href="#about_me_id"
+          ><h2 class="main_intro display_inline">- About me</h2></a
+        >
+        <br />
+        <br />
+        <br />
+        <br />
+        <a href="#portfolio_id"
+          ><h2 class="main_intro display_inline">- Portfolio</h2></a
+        >
+        <br />
+        <br />
+        <br />
+        <br />
+        <a href="#contacts_id"
+          ><h2 class="main_intro display_inline">- Contacts</h2></a
+        >
+      </section>
+      <section id="about_me_id">
+        <h1>About me</h1>
+        <div class="main_row">
+          <div class="side1">
+            <img src="./img/riding_800700.jpg" width="60%" alt="" />
+            <p>Riding</p>
+          </div>
+          <div class="side2">
+            <img src="./img/food_800700.jpg" width="60%" alt="" />
+            <p>Food</p>
+          </div>
+          <div class="side3">
+            <img src="./img/fishing_800700.jpg" width="60%" alt="" />
+            <p>Fishing</p>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio" id="portfolio_id">
+        <h1>Portfolio</h1>
+        <div class="main_row">
+          <div>
+            <h2>개인 웹페이지 제작</h2>
+            <h5>22년 11월</h5>
+            <div><img src="./img/laptop_800700.jpg" alt="" width="40%" /></div>
+            <p>
+              개발자의 품격 부트캠프 수업내용을 활용한 웹페이지 제작 <br />
+              [ 사용언어 - HTML, CSS ]
+            </p>
+          </div>
+          <div>
+            <h2>Unknown Project</h2>
+            <h5>in the future</h5>
+            <div><img src="./img/laptop_800700.jpg" alt="" width="40%" /></div>
+            <p>Coming Soon...</p>
+          </div>
+        </div>
+      </section>
+      <section class="contacts" id="contacts_id">
+        <h1>Contacts</h1>
+        <div class="main_row">
+          <div class="contacts_row">
+            <a href="https://blog.naver.com/quantflow" target="_blank"
+              ><img src="./img/naver_blog.jpg" alt="" width="30%"
+            /></a>
+            <br />
+            <p>
+              <a href="https://blog.naver.com/quantflow" target="_blank"
+                >Naver Blog</a
+              >
+              <br />
+              - Book Reviews
+            </p>
+          </div>
+          <div class="contacts_row">
+            <a href="https://dailycommit.tistory.com/" target="_blank"
+              ><img src="./img/tistory_blog.jpg" alt="" width="30%"
+            /></a>
+            <br />
+            <p>
+              <a href="https://dailycommit.tistory.com/" target="_blank"
+                >Tistory Blog</a
+              >
+              <br />
+              - Study of Software Development
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h6>Copyright - 2022 Assignment for HTML and CSS</h6>
+    </footer>
+  </body>
+</html>

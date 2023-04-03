@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* border  */
+      /* border-top, border-right, border-bottom, border-left */
+      /* border: 5px -> 4면 모두 5px */
+      /* border: 5px 10px -> top, bottom은 5px, right, left는 10px */
+      /* border: 5px 10px 7px -> top은 5px, right, left는 10px, bottom 7px */
+      /* border: 5px 10px 7px 8px */
+      div {
+        /* border: 3px solid red; */
+        border-width: 3px;
+        /* border-style: solid; */
+        border-color: red;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+      }
+
+      .dashed {
+        border-style: dashed;
+      }
+
+      .dotted {
+        border-style: dotted;
+      }
+
+      .solid {
+        border-style: solid;
+      }
+
+      .double {
+        border-style: double;
+      }
+
+      .groove {
+        border-style: groove;
+      }
+
+      .ridge {
+        border-style: ridge;
+      }
+
+      .inset {
+        border-style: inset;
+      }
+
+      .outset {
+        border-style: outset;
+      }
+
+      /* 두께 */
+      .thin {
+        border-width: thin;
+      }
+
+      .medium {
+        border-width: medium;
+      }
+
+      .thick {
+        border-width: thick;
+      }
+
+      .radius {
+        border-radius: 10px;
+      }
+
+      /* border: border-width border-style border-color */
+    </style>
+  </head>
+  <body>
+    <!-- 테두리가 직사각형 여러개로 그려짐 -->
+    <div class="dashed"></div>
+    <!-- 테투리가 둥근 점 여러개로 그려짐 -->
+    <div class="dotted"></div>
+    <!-- 직선 -->
+    <div class="solid radius"></div>
+    <div class="solid thin"></div>
+    <div class="solid medium"></div>
+    <div class="solid thick"></div>
+    <!-- 이중선 -->
+    <div class="double"></div>
+    <!-- 테두리가 파인 것 처럼 -->
+    <div class="groove"></div>
+    <!-- 테두리가 튀어나온 것 처럼 -->
+    <div class="ridge"></div>
+    <!-- 요소가 파인 것 처럼 -->
+    <div class="inset"></div>
+    <!-- 요소가 튀어나온 것 처럼 -->
+    <div class="outset"></div>
+  </body>
+</html>

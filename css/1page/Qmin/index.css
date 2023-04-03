@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+.one {
+  background-color: rgb(123, 101, 221);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(123, 101, 221);
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+.navbar a {
+  color: white;
+
+  padding: 30px 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: none;
+  color: black;
+}
+.me {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+.kyu {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  color: white;
+  padding-bottom: 50px;
+}
+
+.two {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(230, 162, 230);
+}
+.side {
+  flex: 40%;
+  padding: 100px 20px 150px 100px;
+  justify-content: center;
+}
+.main {
+  flex: 60%;
+  justify-content: center;
+  padding: 100px 20px 30px 30px;
+}
+.text1 {
+  text-align: left;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.three {
+  background-color: rgb(212, 192, 185);
+}
+.whatilove {
+  width: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  padding-top: 80px;
+}
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.list_img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: 100px 35px 30px 35px;
+}
+
+.list_text {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  margin: 30px 40px 200px 35px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.four {
+  background-color: rgb(159, 119, 197);
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.link a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  padding: 100px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.link a:hover {
+  background-color: rgb(159, 119, 197);
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar,
+  .two,
+  .favorites,
+  .link {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .header {
+        padding: 60px;
+        text-align: center;
+        background-color: #f9fc63;
+        color: black;
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        background-color: #333;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+      }
+
+      .navbar a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .navbar a:hover {
+        background-color: #f9fc63;
+        color: black;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .side {
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .main {
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #ddd;
+      }
+
+      .fixed-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        border: 3px solid green;
+        font-size: 25px;
+        color: green;
+        text-align: center;
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .row,
+        .navbar {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 레이아웃을 위한 시멘틱 태그 -->
+    <!-- header -->
+    <!-- nav -->
+    <!-- aside -->
+    <!-- main -->
+    <header class="header" id="top">
+      <h1>Who Am I</h1>
+    </header>
+    <nav class="navbar">
+      <a href="#">메뉴1</a>
+      <a href="#">메뉴2</a>
+      <a href="#">메뉴3</a>
+      <a href="#">메뉴4</a>
+      <a href="#project5">메뉴5</a>
+    </nav>
+    <div class="row">
+      <aside class="side">
+        <div class="about">
+          <h2>About</h2>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>
+            저는 22년차 소프트웨어 개발자입니다. 유튜브 개발자의 품격을 운영하고
+            있습니다.
+          </p>
+          <h3>Skills</h3>
+          <p>JavaScript, Vue, React, Angular, Java, Database</p>
+          <div class="fakeimg" style="height: 60px">Image</div>
+          <br />
+          <div class="fakeimg" style="height: 60px">Image</div>
+          <br />
+          <div class="fakeimg" style="height: 60px">Image</div>
+        </div>
+      </aside>
+      <main class="main">
+        <section>
+          <h2>프로젝트 1</h2>
+          <h5>2022년 3월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 프로젝트 입니다. 이 프로젝트에서 제 역할은
+            프론트엔드 개발자였습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트 2</h2>
+          <h5>2022년 3월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 프로젝트 입니다. 이 프로젝트에서 제 역할은
+            프론트엔드 개발자였습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트 3</h2>
+          <h5>2022년 3월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 프로젝트 입니다. 이 프로젝트에서 제 역할은
+            프론트엔드 개발자였습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트 4</h2>
+          <h5>2022년 3월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 프로젝트 입니다. 이 프로젝트에서 제 역할은
+            프론트엔드 개발자였습니다.
+          </p>
+        </section>
+        <section id="project5">
+          <h2>프로젝트 5</h2>
+          <h5>2022년 3월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 프로젝트 입니다. 이 프로젝트에서 제 역할은
+            프론트엔드 개발자였습니다.
+          </p>
+        </section>
+      </main>
+    </div>
+    <div class="footer">
+      <h2>Copyright 개발자의품격 2022</h2>
+    </div>
+    <a class="fixed-button" id="btnTop" href="#top">&uarr;</a>
+    <script>
+      let showScrollBtn = false;
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 550 && !showScrollBtn) {
+          showScrollBtn = true;
+          document.querySelector("#btnTop").style.display = "block";
+        } else if (window.scrollY <= 550 && showScrollBtn) {
+          showScrollBtn = false;
+          document.querySelector("#btnTop").style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

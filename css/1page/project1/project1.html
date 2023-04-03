@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*기본 적용*/
+      html {
+        scroll-behavior: smooth;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: rgb(229, 227, 227);
+      }
+
+      .all_con {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      /*navbar*/
+      .nav_con {
+        background-color: rgb(105, 38, 38);
+        width: 15%;
+      }
+
+      .navbar {
+        display: flex;
+
+        flex-direction: column;
+        position: sticky;
+
+        width: 100%;
+        height: 900px;
+
+        top: 130px;
+      }
+
+      .navbar img {
+        width: 100px;
+        margin: 0 auto;
+        border-radius: 25px;
+      }
+
+      .profile {
+        border: 1px solid rgb(41, 41, 41);
+        margin: 20px auto;
+        width: 80%;
+        padding: 5px;
+
+        font-weight: bold;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        padding: 20px;
+
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      /*main*/
+
+      main {
+        background-color: rgb(46, 45, 45);
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .sec_con {
+        width: 100%;
+        margin: 40px;
+      }
+
+      section {
+        margin-top: 80px;
+        border: 1px solid black;
+        width: 90%;
+        padding: 40px;
+      }
+
+      h2 {
+        padding: 20px;
+        margin: 0;
+        border-bottom: 1px dashed black;
+      }
+
+      .skill_con {
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+
+        margin: auto;
+        padding: 20px 0px;
+        width: 90%;
+      }
+
+      .skill img {
+        background-color: white;
+        width: 200px;
+        border: 1px solid black;
+      }
+
+      .tab_con {
+        display: flex;
+        flex-direction: row;
+
+        padding: 20px;
+        width: 95%;
+      }
+
+      .tab_con_img {
+        display: flex;
+        flex-direction: row;
+
+        overflow: auto;
+        width: 50%;
+      }
+
+      .tab_con_content {
+        width: 50%;
+      }
+
+      .tab_con_img img {
+        padding-right: 5px;
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+
+        .sec_con {
+          width: 100%;
+          margin: 0;
+        }
+
+        section {
+          width: 100%;
+        }
+
+        .nav_con {
+          width: 100%;
+          margin: auto;
+          position: sticky;
+
+          top: 0;
+        }
+
+        .navbar {
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 60px;
+        }
+
+        .navbar img {
+          width: 35px;
+          margin: 5px;
+        }
+
+        .profile {
+          display: none;
+        }
+
+        .navbar a {
+          font-size: 15px;
+        }
+        /****************main*********/
+        main {
+          width: 100%;
+        }
+
+        .skill_con {
+          flex-direction: row;
+        }
+
+        section {
+          margin-top: 0px;
+        }
+
+        .tab_con {
+          flex-direction: column;
+        }
+
+        .tab_con_content,
+        .tab_con_img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all_con">
+      <div class="nav_con">
+        <nav class="navbar">
+          <img src="./pro.jpg" alt="개발자가 스쿠버다이빙 하는 사진" />
+          <div class="profile">
+            <p style="text-align: center">개발자를 꿈꾸는 정진영</p>
+          </div>
+
+          <a href="#me">About me</a>
+          <a href="#skills">SKILLS</a>
+          <a href="#hobby">취미</a>
+          <a href="#travel">여행</a>
+          <a href="https://othello.tistory.com/">블로그</a>
+        </nav>
+      </div>
+      <!------------------------------------------------------------------------------>
+      <main>
+        <div class="sec_con">
+          <section>
+            <article style="border: 1px solid black">
+              <h2 id="me">About me</h2>
+              <div>
+                <br />
+                <p style="margin: 20px">
+                  안녕하세요, 늦은 나이에 새로운 경험을 쌓아가고 있는
+                  정진영입니다.
+                </p>
+                <br />
+              </div>
+            </article>
+            <br />
+            <br />
+            <article class="skill" style="border: 1px solid black">
+              <h2 id="skills">SKILLS : HTML, CSS</h2>
+              <div class="skill_con" style="">
+                <img src="./html_img.png" usemap="#image-map" />
+                <map name="image-map">
+                  <area
+                    target="_blank"
+                    alt="HTML-w3schools"
+                    title=""
+                    href="https://www.w3schools.com/html/default.asp"
+                    coords="0,1,224,224"
+                    shape="rect"
+                  />
+                </map>
+                <img src="./css_img.png" usemap="#image-map" />
+
+                <map name="image-map">
+                  <area
+                    target="_blank"
+                    alt="CSS-w3schools"
+                    title=""
+                    href="https://www.w3schools.com/css/default.asp"
+                    coords="0,1,224,224"
+                    shape="rect"
+                  />
+                </map>
+              </div>
+            </article>
+            <br />
+            <br />
+            <article style="border: 1px solid black">
+              <h2 id="hobby">취미</h2>
+              <div class="tab_con">
+                <div class="tab_con_content">
+                  <h3 style="margin: 20px; height: 50px">1. 물생활</h3>
+                  <p style="margin: 20px">
+                    오토싱, 체리새우, 하스타투스 등이 살아가는 1.5자 수조
+                  </p>
+                </div>
+                <div class="tab_con_img">
+                  <img src="./hobby1.jpg" />
+                  <img src="./hobbt2.jpg" />
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section style="margin-top: 40px">
+            <article style="border: 1px solid black">
+              <h2 id="travel">여행</h2>
+              <div class="tab_con">
+                <div class="tab_con_content">
+                  <h3 style="margin: 20px; height: 50px">1. 일본</h3>
+                  <p style="margin: 20px">친구들과 함께한 일본여행</p>
+                </div>
+                <div class="tab_con_img">
+                  <img src="./일본1.jpg" />
+                  <img src="./일본2.jpg" />
+                  <img src="./일본3.jpg" />
+                  <img src="./일본4.jpg" />
+                </div>
+              </div>
+              <div class="tab_con">
+                <div class="tab_con_content">
+                  <h3 style="margin: 20px; height: 50px">2. 제주도</h3>
+                  <p style="margin: 20px">
+                    제주도의 우측 상단을 위주로 돌아다녔던 여행
+                  </p>
+                </div>
+                <div class="tab_con_img">
+                  <img src="./제주1.jpg" />
+                  <img src="./제주2.jpg" />
+                  <img src="./제주3.jpg" />
+                  <img src="./제주4.jpg" />
+                  <img src="./제주5.jpg" />
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

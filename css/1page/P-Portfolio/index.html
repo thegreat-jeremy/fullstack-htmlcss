@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .container {
+        max-width: 1450px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+        height: 90px;
+        position: sticky;
+        top: 0;
+        background-color: #f4f3ea;
+      }
+
+      header .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      header .logo img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      header .logo h2 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+      }
+
+      nav a {
+        margin-left: 20px;
+        color: #ecbd04;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .row {
+        display: flex;
+      }
+
+      aside {
+        width: 30%;
+      }
+
+      main {
+        width: 70%;
+        display: flex;
+      }
+
+      main section {
+        width: 25%;
+        padding: 0px 20px;
+      }
+
+      .about img {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+      }
+
+      section img {
+        width: 100%;
+        height: auto;
+      }
+
+      .mini-menu {
+        display: none;
+        color: #ecbd04;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .row {
+          flex-direction: column;
+        }
+
+        aside {
+          width: 100%;
+        }
+
+        main {
+          width: 100%;
+          flex-wrap: wrap;
+        }
+
+        main section {
+          width: 50%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .row {
+          flex-direction: column;
+        }
+
+        header {
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 0px 10px;
+        }
+
+        header.active {
+          height: 200px;
+        }
+
+        nav {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        nav.active {
+          display: flex;
+        }
+
+        .mini-menu {
+          display: block;
+        }
+
+        aside {
+          width: 100%;
+        }
+
+        main {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        main section {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./img/fe-logo.png" />
+          <h2>Ferrari Korea</h2>
+        </div>
+        <button class="mini-menu">
+          <i class="fa-solid fa-bars fa-2x"></i>
+        </button>
+        <nav>
+          <a href="#">PRODUCTS</a>
+          <a href="#">STORE</a>
+          <a href="#">HISTORY</a>
+          <a href="#">CONTACT US</a>
+          <a href="#">UNIVERSE</a>
+
+          <div class="icons">
+            <a href="#"><i class="fab fa-twitter fa"></i></a>
+            <a href="#"><i class="fab fa-github-square fa"></i></a>
+            <a href="#"><i class="fab fa-facebook fa"></i></a>
+          </div>
+        </nav>
+      </header>
+      <div class="row">
+        <aside>
+          <div class="about">
+            <h2 style="font-weight: bold">About</h2>
+            <img src="./img/fe-8.png" />
+          </div>
+
+          <h2 style="font-weight: bold">History</h2>
+
+          <ul class="a-side">
+            <li><a href="#"> 1950년대 </a></li>
+
+            <li><a href="#"> 1960년대 </a></li>
+
+            <li><a href="#"> 1970년대 </a></li>
+
+            <li><a href="#"> 1980년대 </a></li>
+
+            <li><a href="#"> 1990년대 </a></li>
+
+            <li><a href="#"> ~2020년대 </a></li>
+          </ul>
+        </aside>
+        <main>
+          <section>
+            <h1 style="font-weight: bold">엔트리 GT Range</h1>
+
+            <p style="font-size: 0.5em">
+              : V6 V8모델로 페라리 베스트셀러차량들
+            </p>
+
+            <div class="section">
+              <img src="./img/엔트리-1.png" alt="" />
+              <p>250GT 1954'</p>
+
+              <img src="./img/엔트리-2.png" alt="" />
+              <p>250GTO 1952'-1964'</p>
+
+              <img src="./img/엔트리-3.png" alt="" />
+              <p>308GTB</p>
+
+              <img src="./img/엔트리-4.png" alt="" />
+              <p>458Spider 2012'-15'4억2,000만원</p>
+
+              <img src="./img/엔트리-5.png" alt="" />
+              <p>488Spider 2015'-19'3억8,300만원</p>
+
+              <img src="./img/엔트리-6.png" alt="" />
+              <p>F8Tributo 2019'3억6,000만원</p>
+
+              <img src="./img/엔트리-8.png" alt="" />
+              <p>Portofino 2018'2억8,000만원</p>
+
+              <img src="./img/엔트리-7.png" alt="" />
+              <p>296GTS 2022'</p>
+
+              <img src="./img/엔트리-9.png" alt="" />
+              <p>Roma 2020'3억2,000만원</p>
+            </div>
+          </section>
+          <section>
+            <h1 style="font-weight: bold">플래그십 SPORT Range v12</h1>
+
+            <p style="font-size: 0.5em">: 페라리 최고의 v12엔진을 사용함</p>
+
+            <div class="section">
+              <img src="./img/812-competizione.png" />
+              <p>812competizione : 2017'4억6,900만원</p>
+
+              <img src="./img/플래그-3.png" />
+              <p>GTC4Lusso : 2016'4억5,000만원</p>
+
+              <img src="./img/플래그-2.png" />
+              <p>812GTS : 2020'5억1,500만원</p>
+
+              <img src="./img/플래그-4.png" />
+              <p>SF90Stradale : 2019'6억4,000만원</p>
+
+              <img src="./img/플래그-5.png" />
+              <p>F12berlinetta : 2012'-2016'5억</p>
+
+              <img src="./img/플래그-6.png" />
+              <p>FF Ferrari Four : 2011'-2016'4억6,000만원</p>
+
+              <img src="./img/플래그-7.png" />
+              <p>SF90Spider : 2022</p>
+            </div>
+          </section>
+
+          <section>
+            <h1 style="font-weight: bold">하이퍼카 Special Series</h1>
+
+            <p style="font-size: 0.5em">
+              : 한정 생산으로 특별하고 상징적인 최고의 미드쉽 모델
+            </p>
+
+            <div class="section">
+              <img src="./img/하이퍼-1.png" alt="" />
+              <p>F40 : 1987'창립40주년 1315한정</p>
+
+              <img src="./img/하이퍼-2.png" alt="" />
+              <p>F50 : 1996'창립50주년 302대한정</p>
+
+              <img src="./img/하이퍼-3.png" alt="" />
+              <p>Enzo Ferrari 2002'설립자기념 400대한정</p>
+            </div>
+          </section>
+          <section>
+            <h1 style="font-weight: bold">아이코나 ICONA</h1>
+
+            <p style="font-size: 0.5em">: 페라리의 역사를 기념하는 모델</p>
+
+            <div class="section">
+              <img src="./img/i-1.png" alt="" />
+              <p>Monza 15억</p>
+
+              <img src="./img/i-2.png" alt="" />
+              <p>Dayona SP3 2021'2인승 15억</p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelector(".mini-menu").addEventListener("click", () => {
+          document.querySelector("header").classList.toggle("active");
+          document.querySelector("nav").classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- source -->
+    <!-- controls - 비디오 관련된 재생,멈춤,음성 등 조정을 위한 UI가 제공 -->
+    <!-- autoplay - 자동실행 -->
+    <!-- muted - 음성 소거 -->
+    <!-- loop - 영상이 끝에 가면 처음부터 실행 -->
+    <!-- poster - 영상 실행전 보이는 썸네일 이미지 -->
+    <!-- preload : auto, metadata, none -->
+    <!-- auto : 사용자가 영상을 시청하든 안하든 영상을 미리 다운로드. 시청할 확율이 매우 높고, 영상 플레이 했을 때 바로 보여줘야 하는 중요한 영상 -->
+    <!-- metadata : 영상을 다운로드 하지 않고, 영상 상영 시간과 같은 메타 정보만 미리 가져옴 -->
+    <!-- none : 영상을 다운로드 하지 않고, 사용자가 영상을 바로 보지 않을 확율이 매우 높은것. 서버가 최소한의 트래픽을 유지하고 싶을 때 적용 -->
+    <video
+      src="./media/bootcamp.mp4"
+      poster="./media/bootcamp.png"
+      width="320px"
+      controls
+      muted
+      loop
+      autoplay
+      preload="auto"
+    ></video>
+    <br />
+    <video src="./media/bootcamp.mp4" width="320px" controls>
+      <track
+        src="./media/bootcamp.en.vtt"
+        kind="subtitles"
+        srclang="en"
+        label="영어(English)"
+      />
+      <track
+        src="./media/bootcamp.ko.vtt"
+        kind="subtitles"
+        srclang="ko"
+        label="한국어(Korean)"
+      />
+    </video>
+  </body>
+</html>
